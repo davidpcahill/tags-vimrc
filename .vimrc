@@ -18,6 +18,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
+set t_Co=256
 set modeline
 set backspace=2
 set tabstop=8
@@ -53,16 +54,16 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Buffer management shortcuts
-" new buffer
-nmap <leader>k :enew<cr>
-" next buffer
-nmap <leader>l :bn!<cr>
-" previous buffer
-nmap <leader>h :bp!<cr>
-" quit buffer
-nmap <leader>bq :bp <BAR> bd #<CR>·
-" <leader>b Default buffergator tab window
+" Buffer management
+" <leader>b Buffergator list
+" Window management
+" ctrl-w + [hjkl]
+" Tab management
+" ctrl-t + [hjkl]
+nmap <C-t>h :bp!
+nmap <C-t>l :bp!
+nmap <C-t>k :enew<cr>
+nmap <C-t>j :bp <BAR> bd #<CR>
 
 map <C-N><C-t> :NERDTreeToggle<CR>
 
