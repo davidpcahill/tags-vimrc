@@ -8,7 +8,7 @@ So enjoy!
 
  git clone https://github.com/TagWolf/tags-vimrc.git ~/.vim/tags-vimrc
 
- cp ~/.vim/tags-vimrc ~/.vimrc
+ cp ~/.vim/tags-vimrc/.vimrc ~/.vimrc
 
 * Then in vi/vim
 
