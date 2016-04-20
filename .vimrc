@@ -58,18 +58,29 @@ let g:syntastic_check_on_wq = 0
 " <leader>b Buffergator list
 " Window management
 " ctrl-w + [hjkl]
-" Tab management
+" ctrl-w - w (switch between windows)
+" Buffer (Tab) management
 " ctrl-t + [hjkl]
-nmap <C-t>h :bp!
-nmap <C-t>l :bp!
-nmap <C-t>k :enew<cr>
+nmap <C-t>h :bp!<CR>
+nmap <C-t>l :bn!<CR>
+" New buffer
+nmap <C-t>k :enew<CR>
+" Close buffer
 nmap <C-t>j :bp <BAR> bd #<CR>
+" Next buffer (tab)
+" Ctrl-Tab
+nnoremap <C-Tab> :bn<CR>
+" Previous buffer (tab)
+" Ctrl-Shift-Tab
+nnoremap <C-S-Tab> :bp<CR>
+" Switch to buffer number
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 
 map <C-N><C-t> :NERDTreeToggle<CR>
 
 set numberwidth=3
 highlight LineNr ctermfg=LightBlue
-nmap <C-N><C-N> :set invnumber norelativenumber!<CR>
+nmap <C-N><C-N> :set invnumber norelativenumber!<CR> :set number<CR>
 
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
