@@ -1,4 +1,4 @@
-My vimrc is probably better than yours. It will also handle many common and useful plugins and actions.
+My vimrc. It will also handle many common and useful plugins and actions.
 
 So enjoy!
 
